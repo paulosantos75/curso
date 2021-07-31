@@ -2,6 +2,7 @@
 
 class Database{
 
+    //metodo que retorna uma conexao
     public static function getConnection(){
         $envPath = realpath(dirname(__FILE__).'/../env.ini');
         $env = parse_ini_file($envPath);
@@ -16,6 +17,7 @@ class Database{
 
     }
 
+    //retorna uma consulta da base de dados- retorna um resultset
     public static function getResultFromQuery($sql){
         $conn = self::getConnection();
         //resultset
